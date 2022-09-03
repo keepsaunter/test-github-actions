@@ -2,7 +2,7 @@ name: test node start
 defaults:
   run:
     shell: bash
-    working-directory: ./doc
+    working-directory: ./doc3
 on:
   push:
     branches:
