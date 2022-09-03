@@ -8,6 +8,5 @@ jobs:
     - name: job1-step-1
       # uses: actions/checkout@master
       run: |
-        ls
+        ls -a
         echo 909
-      working-directory: ../doc
