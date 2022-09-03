@@ -6,10 +6,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - name: job1-step-1
-      run: echo 9090
-  job2:
-    name: echo-200
-    runs-on: ubuntu-18.04
-    steps:
-    - name: job1-step-2
-      run: echo 29090
+      # uses: actions/checkout@master
+      run:
+        - ls
+        - echo 909
