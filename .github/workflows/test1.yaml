@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - name: job1-step-1
-      # uses: actions/checkout@master
+      uses: actions/checkout@master
       run: |
         ls -a
         echo 909
