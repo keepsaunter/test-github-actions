@@ -8,8 +8,7 @@ jobs:
     name: echo-100
     runs-on: ubuntu-18.04
     steps:
-    - name: job1-step-1
-      uses: actions/checkout@master
+    - uses: actions/checkout@master
     - name: job1-step-2
       run: |
         ls -a
