@@ -2,7 +2,7 @@ name: test node start
 defaults:
   run:
     shell: bash
-    working-directory: ./doc3
+    working-directory: ./doc
 on:
   push:
     branches:
@@ -14,9 +14,8 @@ jobs:
     steps:
     - name: job1-step-1
       uses: actions/checkout@master
-      with:
-        ref: test2
     - name: job1-step-2
+      working-directory: ./doc2
       run: |
         ls -a
         echo 1909
