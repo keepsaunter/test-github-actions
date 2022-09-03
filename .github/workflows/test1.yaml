@@ -1,5 +1,8 @@
 name: test node start
-on: push
+on:
+  push:
+    branches:
+      - master
 jobs:
   job1:
     name: echo-100
@@ -7,6 +10,8 @@ jobs:
     steps:
     - name: job1-step-1
       uses: actions/checkout@master
+      with:
+        ref: test2
     - name: job1-step-2
       run: |
         ls -a
