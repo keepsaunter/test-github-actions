@@ -10,3 +10,4 @@ jobs:
       run: |
         ls
         echo 909
+      working-directory: ./doc
