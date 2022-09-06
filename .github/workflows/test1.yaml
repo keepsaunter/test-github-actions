@@ -1,8 +1,4 @@
 name: test node start
-defaults:
-  run:
-    shell: bash
-    working-directory: ./doc
 on: create
 jobs:
   job1:
