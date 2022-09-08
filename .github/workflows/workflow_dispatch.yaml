@@ -1,9 +1,6 @@
-name: test workflow_dispatch
-on: push
+on: workflow_call
 jobs:
-  uses: keepsaunter/test-github-actions/.github/workflows/test_workflow_call.yml@master
-  job2:
-    name: echo-10021
-    runs-on: ubuntu-18.04
+  local-action-testing:
+    runs-on: ubuntu-latest
     steps:
-      - run: echo 90
+      - uses: ./main
