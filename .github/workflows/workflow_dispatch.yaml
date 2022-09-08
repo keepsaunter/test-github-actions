@@ -3,7 +3,6 @@ on: push
 jobs:
   job2:
     name: echo-1002
-    needs: job1
     runs-on: ubuntu-18.04
     steps:
       - run: echo 90
