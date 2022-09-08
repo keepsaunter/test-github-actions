@@ -5,9 +5,11 @@ jobs:
     name: echo-1001
     runs-on: ubuntu-18.04
     steps:
-      - id: step1-1
-        run: echo "::set-output name=docker_tag::test229909-${GITHUB_SHA}"
-      - run: echo tt${{steps.step1-1.outputs.docker_tag}}
+      - id: step0
+        uses: mathiasvr/command-output@v1
+        with:
+          run: echo 1919119
+      - run: echo tt${{steps.step0.outputs.stdout}}tt
   # job2:
   #   name: echo-1002
   #   needs: job1
