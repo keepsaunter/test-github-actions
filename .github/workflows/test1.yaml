@@ -1,8 +1,8 @@
 name: test node start
 on:
-  pull-request
-  types:
-    - create
+  pull-request:
+    types:
+      - create
 jobs:
   job1:
     name: echo-100
