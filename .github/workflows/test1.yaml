@@ -1,6 +1,6 @@
 name: test node start
 on:
-  pull-request:
+  pull_request:
     types:
       - create
 jobs:
