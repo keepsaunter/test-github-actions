@@ -5,10 +5,10 @@ jobs:
     name: echo-1002
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
         with:
           path: workflows
-      - uses: ./workflows/main
+      - uses: ./main
         with:
           username: oc
       - run: echo 90
