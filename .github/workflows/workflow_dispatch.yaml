@@ -7,6 +7,15 @@ on:
         required: false
         type: string
         default: 'test99'
+      tags2:
+        description: 'Test scenario tags2'
+        required: true
+        type: boolean
+      tags3:
+        description: 'Test scenario tags3'
+        required: true
+        type: number
+        default: 88
 jobs:
   job1:
     name: echo-100
