@@ -1,24 +1,15 @@
 name: test workflow_dispatch
 on:
   workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Test scenario tags'
-        required: false
-        type: string
-        default: 'test99'
-      tags2:
-        description: 'Test scenario tags2'
-        required: true
-        type: boolean
-      tags3:
-        description: 'Test scenario tags3'
-        required: true
-        type: number
-        default: 88
 jobs:
   job1:
     name: echo-100
     runs-on: ubuntu-18.04
     steps:
-    - run: echo ${{inputs.tags}}workflow_dispatch
+      - run: echo ::set-output name=docker_tag::test9909-${GITHUB_SHA}
+        id: step1-1
+  job2:
+    name: echo-100
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo ${{steps.step1-1.outputs.docker_tag}}
