@@ -9,7 +9,7 @@ jobs:
         uses: mathiasvr/command-output@v1
         with:
           run: echo 1919119
-      - run: echo tt${{steps.step0.outputs.stdout}}tt
+      - run: echo ${{steps.step0.outputs.stdout}}
   # job2:
   #   name: echo-1002
   #   needs: job1
