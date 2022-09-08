@@ -1,7 +1,7 @@
 name: test schedule
 on:
   schedule:
-    - cron: '17 15 * * *'
+    - cron: '21 15 * * *'
 jobs:
   job1:
     name: echo-100
