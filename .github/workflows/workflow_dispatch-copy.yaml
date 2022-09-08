@@ -12,4 +12,5 @@ jobs:
       - run: cd .. && ls
       - run: cd ../.. && ls
       - run: cd ../../.. && ls
+      - run: cd ../../../.. && ls
       - run: echo 1000
