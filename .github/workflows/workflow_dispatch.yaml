@@ -1,4 +1,5 @@
-name: test_workflow_dispatch
+name: test workflow_dispatch
+id: test_workflow_dispatch
 on: push
 jobs:
   job2:
