@@ -5,7 +5,11 @@ on:
       tags:
         description: 'Test scenario tags'
         required: false
-        type: boolean
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
 jobs:
   job1:
     name: echo-100
