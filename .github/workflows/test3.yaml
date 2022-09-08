@@ -1,4 +1,4 @@
-name: test node start
+name: test pull closed
 on:
   pull_request:
     types:
