@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v3
-      - run: ls -a ./.github/workflows
+      - run: ls -a /home/runner/work/test-github-actions/test-github-actions/.github/workflows
       - uses: ./.github/workflows/test_workflow_call.yaml
         with:
           username: oc
