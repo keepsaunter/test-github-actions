@@ -2,4 +2,4 @@ on: push
 jobs:
   local-action-testing:
     steps:
-      - use: keepsaunter/test-github-actions/.github/workflows/test_workflow_call.yaml@master
+      - uses: keepsaunter/test-github-actions/.github/workflows/test_workflow_call.yaml@master
