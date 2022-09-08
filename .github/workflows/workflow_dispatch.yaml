@@ -1,18 +1,9 @@
-name: test workflow_dispatch
+name: test_workflow_dispatch
 on: push
 jobs:
-  job1:
-    name: echo-1001
+  job2:
+    name: echo-1002
+    needs: job1
     runs-on: ubuntu-18.04
     steps:
-      - id: step0
-        uses: mathiasvr/command-output@v1
-        with:
-          run: echo 1919119
-      - run: echo tt${{steps.step0.outputs.stdout}}
-  # job2:
-  #   name: echo-1002
-  #   needs: job1
-  #   runs-on: ubuntu-18.04
-  #   steps:
-  #     - run: echo tt${{steps.step1-1.outputs.docker_tag}}
+      - run: echo 90
