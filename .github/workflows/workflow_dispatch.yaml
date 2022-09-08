@@ -1,6 +1,4 @@
 on: push
 jobs:
   local-action-testing:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./main
+    use: keepsaunter/test-github-actions/.github/workflows/test_workflow_call.yml@master

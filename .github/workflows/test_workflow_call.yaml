@@ -1,14 +1,7 @@
 name: test22
-on:
-  workflow_call:
-    inputs:
-      username:
-        description: 'A username passed from the caller workflow'
-        default: 'john-doe'
-        required: false
-        type: string
+on: workflow_call
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo test-${{inputs.username}}
+      - run: echo test
