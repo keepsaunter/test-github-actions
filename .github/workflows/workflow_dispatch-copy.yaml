@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - run: pwd
-      - run: cd .. && ls
-      - run: cd ../.. && ls
-      - run: cd ../../.. && ls
-      - run: cd ../../../.. && ls
+      - run: cd .. && ls -a
+      - run: cd ../.. && ls -a
+      - run: cd ../../.. && ls -a
+      - run: cd ../../../.. && ls -a
       - run: echo 1000
