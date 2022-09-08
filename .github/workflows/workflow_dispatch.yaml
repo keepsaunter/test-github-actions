@@ -7,9 +7,4 @@ jobs:
     steps:
       - id: step1-1
         run: echo "::set-output name=docker_tag::test9909-${GITHUB_SHA}"
-  job2:
-    name: echo-1002
-    needs: job1
-    runs-on: ubuntu-18.04
-    steps:
       - run: echo tt${{steps.step1-1.outputs.docker_tag}}
