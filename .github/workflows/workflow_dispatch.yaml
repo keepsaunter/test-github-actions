@@ -1,16 +1,15 @@
 name: test workflow_dispatch
-on:
-  workflow_dispatch:
+on: push
 jobs:
   job1:
     name: echo-1001
     runs-on: ubuntu-18.04
     steps:
       - id: step1-1
-        run: echo ::set-output name=docker_tag::test9909-${GITHUB_SHA}
+        run: echo "::set-output name=docker_tag::test9909-${GITHUB_SHA}"
   job2:
     name: echo-1002
     needs: job1
     runs-on: ubuntu-18.04
     steps:
-      - run: echo ${{steps.step1-1.outputs.docker_tag}}
+      - run: echo tt${{steps.step1-1.outputs.docker_tag}}
