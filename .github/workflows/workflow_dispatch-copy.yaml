@@ -1,8 +1,7 @@
 name: test workflow_dispatch-copy
 on:
   workflow_run:
-    workflows:
-      - test_workflow_dispatch
+    workflows: test_workflow_dispatch
     types: completed
 jobs:
   job2:
