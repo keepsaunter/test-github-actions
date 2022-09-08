@@ -1,9 +1,12 @@
 name: test workflow_dispatch
 on: push
 jobs:
-  job2:
+  job1:
     name: echo-1002
     runs-on: ubuntu-18.04
     uses: keepsaunter/test-github-actions/.github/workflows/test_workflow_call.yml@main
+  job2:
+    name: echo-1002
+    runs-on: ubuntu-18.04
     steps:
       - run: echo 90
