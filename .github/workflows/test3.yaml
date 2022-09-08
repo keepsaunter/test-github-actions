@@ -2,10 +2,10 @@ name: test node start
 on:
   pull_request:
     types:
-      - opened
+      - closed
 jobs:
   job1:
     name: echo-100
     runs-on: ubuntu-18.04
     steps:
-    - run: echo opened
+    - run: echo closed
