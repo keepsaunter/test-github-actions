@@ -1,0 +1,9 @@
+name: test push when call
+on:
+  push
+jobs:
+  job1:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: ./.github/actions/test_call
+      - run: echo test2

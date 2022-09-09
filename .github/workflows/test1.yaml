@@ -1,11 +1,9 @@
-name: testOn
+name: test_call
 on:
-  push:
-    paths:
-      - '**.yaml'
+  workflow_call
 jobs:
   job1:
     name: echo-100
     runs-on: ubuntu-18.04
     steps:
-    - run: echo 90901
+      - run: echo test1
