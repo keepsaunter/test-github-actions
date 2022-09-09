@@ -2,6 +2,7 @@ name: testOn
 on:
   push:
     branches:
+      - *
       - '!master'
 jobs:
   job1:
