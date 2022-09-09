@@ -1,0 +1,9 @@
+name: test_call
+on:
+  workflow_call
+jobs:
+  job1:
+    name: echo-100
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo test1
