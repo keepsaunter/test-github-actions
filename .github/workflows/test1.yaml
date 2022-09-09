@@ -2,8 +2,8 @@ name: testOn
 on:
   push:
     branches:
-      - '!master'
-      - '*'
+      - 'master'
+      - 'test5'
 jobs:
   job1:
     name: echo-100
