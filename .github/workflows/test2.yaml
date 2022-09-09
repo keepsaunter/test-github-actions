@@ -5,5 +5,6 @@ jobs:
   job1:
     runs-on: ubuntu-18.04
     steps:
+      - actions/checkout@v3
       - uses: ./.github/actions/test_call
       - run: echo test2
