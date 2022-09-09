@@ -7,4 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/myaction
+        with:
+          testName: test 66 gg
       - run: echo test2
