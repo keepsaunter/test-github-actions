@@ -416,7 +416,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _val
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const core = __webpack_require__(/*! @actions/core */ \"./node_modules/@actions/core/lib/core.js\");\n\nconst getInput = (key) => {\n  return process.env[`INPUT_${key.toUpperCase()}`]\n}\nconsole.log(90090, core.getInput('testName'))\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const core = __webpack_require__(/*! @actions/core */ \"./node_modules/@actions/core/lib/core.js\");\n\nconst getInput = (key) => {\n  return process.env[`INPUT_${key.toUpperCase()}`]\n}\nconsole.log(90090, core.getInput('testName') + ' this is test')\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
