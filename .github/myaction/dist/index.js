@@ -781,7 +781,7 @@ eval("// Returns a wrapper function that returns a wrapped callback\n// The wrap
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const core = __webpack_require__(/*! @actions/core */ \"./node_modules/@actions/core/lib/core.js\");\nconst github = __webpack_require__(/*! @actions/github */ \"./node_modules/@actions/github/lib/github.js\");\n\ncore.setOutput('test99', 'this is test output');\nconsole.log(JSON.stringify(github.context.payload, undefined, 2));\nconsole.log(90090, core.getInput('testName') + ' this is test');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const core = __webpack_require__(/*! @actions/core */ \"./node_modules/@actions/core/lib/core.js\");\nconst github = __webpack_require__(/*! @actions/github */ \"./node_modules/@actions/github/lib/github.js\");\n\ncore.setOutput('test99', 'this is test output');\n// console.log(JSON.stringify(github.context.payload, undefined, 2));\nconsole.log(github.context.payload);\nconsole.log(90090, core.getInput('testName') + ' this is test');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
