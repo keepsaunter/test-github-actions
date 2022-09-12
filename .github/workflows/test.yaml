@@ -5,10 +5,10 @@ jobs:
   job1:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/myaction
-        id: my_action
-        with:
-          testName: test 6688 gg
-      - run: echo ${{steps.my_action.outputs.test99}}--output
-      - run: echo test2
+      - run: echo job1.step1.output
+      - run: echo "::set-output name=step2Output::job1_step2_output"
+  job2:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo ${{jobs.job2.outputs.step2Output}}
+      - run: echo job2.step1.output
