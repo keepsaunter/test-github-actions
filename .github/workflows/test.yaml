@@ -12,5 +12,5 @@ jobs:
     needs:
       - job1
     steps:
-      - run: echo ${{jobs.job2.outputs.step2Output}}
+      - run: echo ${{jobs}}
       - run: echo job2.step1.output
