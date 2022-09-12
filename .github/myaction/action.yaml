@@ -2,12 +2,12 @@ name: Multi Checkout
 description: Checkout multiple additional repositories
 inputs:
   testName:
-    description: 'Number of Octocats'
+    description: Number of Octocats
     required: false
-    default: 'test ouchao2'
+    default: test ouchao2
 outputs:
   test99:
-    description: 'Test oc output'
+    description: Test oc output
 runs:
   using: node12
   main: dist/index.js
