@@ -4,7 +4,6 @@ inputs:
   testName:
     description: Number of Octocats
     required: true
-    default: test ouchao2
 outputs:
   test99:
     description: Test oc output
