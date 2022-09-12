@@ -5,12 +5,8 @@ jobs:
   job1:
     runs-on: ubuntu-18.04
     steps:
-      - run: echo job1.step1.output
-      - run: echo "::set-output name=step2Output::job1_step2_output"
+      - uses: actions/checkout@v2
   job2:
-    runs-on: ubuntu-18.04
+    uses: ./.github/workflows/reusable-workflow.yaml
     needs:
-      - job1
-    steps:
-      - run: echo ${{jobs}}
-      - run: echo job2.step1.output
+      job1
