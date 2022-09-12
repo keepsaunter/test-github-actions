@@ -7,6 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/myaction
+        id: my_action
         with:
-          testName: test 66 gg
+          testName: test 6688 gg
+      - run: echo ${{steps.my_action.outputs.test99}}--output
       - run: echo test2
