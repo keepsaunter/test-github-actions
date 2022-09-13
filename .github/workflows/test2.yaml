@@ -1,0 +1,10 @@
+name: test push2 when call
+on:
+  workflow_run:
+    workflows:
+      - Build
+jobs:
+  job1:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo 100
