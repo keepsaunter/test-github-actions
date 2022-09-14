@@ -1,6 +1,6 @@
 name: Multi Checkout
 description: Checkout multiple additional repositories
-inputs:
+# inputs:
   # testName:
   #   description: Number of Octocats
   #   required: false
