@@ -5,6 +5,6 @@ description: 'Local action inside reusable workflow testing'
 #   main: index.js
 runs:
   using: composite
+  shell: sh
   steps:
     - run: echo 999
-      shell: sh
