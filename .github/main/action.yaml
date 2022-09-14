@@ -3,8 +3,10 @@ description: 'Local action inside reusable workflow testing'
 # runs:
 #   using: node12
 #   main: index.js
+default:
+  run:
+    shell: sh
 runs:
   using: composite
-  shell: sh
   steps:
     - run: echo 999
