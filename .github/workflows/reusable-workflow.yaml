@@ -2,7 +2,8 @@ name: test workflow_call call
 on:
   workflow_call:
     inputs:
-      test
+      test:
+        type: string
 jobs:
   job1:
     runs-on: ubuntu-18.04
