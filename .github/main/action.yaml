@@ -3,7 +3,7 @@ description: 'Local action inside reusable workflow testing'
 # runs:
 #   using: node12
 #   main: index.js
-
+shell: sh
 runs:
   using: composite
   steps:
