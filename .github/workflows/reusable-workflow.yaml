@@ -6,13 +6,13 @@ on:
         type: string
     outputs:
       outputVar11:
-        value: ${{jobs.job1.outputs.outputVar12}}
+        value: ${{steps.step1-2.outputs.outputVar1}}
 jobs:
   job1:
     runs-on: ubuntu-18.04
-    outputs:
-      outputVar12: ${{steps.step1-2.outputs.outputVar1}}
+    # outputs:
+    #   outputVar12: ${{steps.step1-2.outputs.outputVar1}}
     steps:
       - run: echo ttt6${{inputs.test}}
       - id: step1-2
-        run: echo "::set-output name=outputVar1::test-output222666"
+        run: echo "::set-output name=outputVar1::test-output22266688"
