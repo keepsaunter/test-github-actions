@@ -9,3 +9,4 @@ runs:
   steps:
     - id: step22
       run: echo 999
+      shell: sh
