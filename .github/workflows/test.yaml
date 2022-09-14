@@ -2,10 +2,6 @@ name: test push when call
 on:
   push
 jobs:
-  job1:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
   job2:
     uses: ./.github/workflows/reusable-workflow.yaml
     needs:
