@@ -5,12 +5,12 @@ on:
       test:
         type: string
     outputs:
-      outputVar11: ${{steps.step1-2.outputs.step1-2}}
+      outputVar11: ${{steps.step1-2.outputs.outputVar1}}
 jobs:
   job1:
     runs-on: ubuntu-18.04
     # outputs:
-    #   outputVar1
+    #   outputVar1: ${{steps.step1-2.outputs.step1-2}}
     steps:
       - run: echo ttt6${{inputs.test}}
       - id: step1-2
