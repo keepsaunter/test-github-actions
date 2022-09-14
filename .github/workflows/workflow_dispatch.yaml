@@ -3,7 +3,8 @@ jobs:
   local-action-testing:
     runs-on: ubuntu-18.04
     outputs:
-      outputVar1: ${{steps.step22.outputs.outputVar1}}
+      outputVar1:
+        value: ${{steps.step22.outputs.outputVar1}}
     steps:
       - id: step222
         run: echo "::set-output name=outputVar::test-output2"
