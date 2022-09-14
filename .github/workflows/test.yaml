@@ -7,4 +7,4 @@ jobs:
     with:
       test: 90999
     steps:
-      run: echo 99
+      - run: echo 99
