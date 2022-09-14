@@ -4,4 +4,10 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-18.04
-    uses: keepsaunter/test-github-actions/.github/myaction@test-action-npm
+    steps:
+      - uses: keepsaunter/test-github-actions/.github/myaction@test-action-npm
+        id: my_action
+        with:
+          testName: test 6688 gg88
+      - run: echo ${{steps.my_action.outputs.test99}}--output
+      - run: echo test2
