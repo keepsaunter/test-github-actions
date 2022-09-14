@@ -5,6 +5,16 @@ inputs:
     description: Number of Octocats
     required: false
     default: test ouchao2
+# outputs:
+#   test99:
+#     description: Test oc output
 runs:
-  using: node12
-  main: dist/index.js
+  # using: node12
+  # main: dist/index.js
+  using: composite
+  steps:
+    - run: echo ${{inputs.testName}}
+      shell: sh # 每一步都需要写shell
+    - id: outputVar1-generator
+      run: echo "::set-output name=test99::val"
+      shell: sh
