@@ -8,7 +8,7 @@ jobs:
     #   test: 90999
     runs-on: ubuntu-18.04
     outputs:
-      outputVar1: ${{steps.step1.outputs.outputVar1}}
+      outputVar11: ${{steps.step1.outputs.outputVar1}}
     steps:
       - id: step1
         run: echo "::set-output name=outputVar1::test-output222"
@@ -17,4 +17,4 @@ jobs:
     needs:
       - job2
     steps:
-      - run: echo 99${{needs.job2.outputs.outputVar1}}
+      - run: echo 99${{needs.job2.outputs.outputVar11}}
