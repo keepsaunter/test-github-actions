@@ -1,22 +1,21 @@
 name: Multi Checkout
 description: Checkout multiple additional repositories
 inputs:
-  testName:
-    description: Number of Octocats
-    required: false
-    default: test ouchao2
+  # testName:
+  #   description: Number of Octocats
+  #   required: false
+  #   default: test ouchao2
 outputs:
   test99:
     description: Test oc output
-    # value: ${{steps.outputVar1-generator.outputs.test99}}
-    value: 9090
+    value: ${{steps.outputVar1-generator.outputs.test99}}
 runs:
-  using: node12
-  main: dist/index.js
-  # using: composite
-  # steps:
-  #   - run: echo ${{inputs.testName}}
-  #     shell: sh # 每一步都需要写shell
-  #   - id: outputVar1-generator
-  #     run: echo "::set-output name=test99::val"
-  #     shell: sh
+  # using: node12
+  # main: dist/index.js
+  using: composite
+  steps:
+    - run: echo ${{inputs.testName}}
+      shell: sh # 每一步都需要写shell
+    - id: outputVar1-generator
+      run: echo "::set-output name=test99::val"
+      shell: sh
