@@ -3,4 +3,6 @@ on:
   push
 jobs:
   job2:
-    uses: keepsaunter/test-github-actions/.github/workflows/reusable-workflow.yaml@test5
+    uses: .github/workflows/reusable-workflow.yaml
+    with:
+      test: 90999

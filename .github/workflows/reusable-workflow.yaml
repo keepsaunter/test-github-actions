@@ -1,8 +1,11 @@
 name: test workflow_call call
 on:
-  workflow_call
+  workflow_call:
+    inputs:
+      test
 jobs:
   job1:
     runs-on: ubuntu-18.04
     steps:
       - run: echo ttt6${{inputs.test}}
+      - run: echo "::set-output name=outputVar1::test-output222"
