@@ -5,7 +5,7 @@ on:
       test:
         type: string
     outputs:
-      outputVar1: ${{steps.outputs.step1-2}}
+      outputVar1: ${{steps.step1-2.outputs.step1-2}}
 jobs:
   job1:
     runs-on: ubuntu-18.04
