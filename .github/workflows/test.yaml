@@ -5,7 +5,7 @@ jobs:
   job1:
     runs-on: ubuntu-18.04
     steps:
-      - uses: keepsaunter/test-github-actions/.github/myaction@test-action-npm
+      - uses: ./.github/myaction@test-action-npm
         id: my_action
         with:
           testName: test 6688 gg66
