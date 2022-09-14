@@ -1,4 +1,4 @@
-name: test push1 when call
+name: test-w
 on:
   push
 jobs:

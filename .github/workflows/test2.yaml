@@ -2,7 +2,7 @@ name: test push2 when call
 on:
   workflow_run:
     workflows:
-      - test2
+      - test-w
 jobs:
   job1:
     runs-on: ubuntu-18.04
