@@ -7,3 +7,4 @@ runs:
   using: composite
   steps:
     - run: echo 999
+      shell: sh
