@@ -4,5 +4,3 @@ on:
 jobs:
   job2:
     uses: ./.github/workflows/reusable-workflow.yaml
-    needs:
-      job1
