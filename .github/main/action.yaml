@@ -1,5 +1,8 @@
 name: 'Local Action'
 description: 'Local action inside reusable workflow testing'
+outputs:
+  outputVar1:
+    value: ${{steps.step22.outputs.outputVar}}
 # runs:
 #   using: node12
 #   main: index.js
