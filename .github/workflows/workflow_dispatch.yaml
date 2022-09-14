@@ -2,7 +2,15 @@ on: push
 jobs:
   local-action-testing:
     runs-on: ubuntu-18.04
+    outputs:
+      outputVar1: ${{steps.step222.outputs.outputVar}}
     steps:
-      - id: step22
-        uses: actions/checkout@v3
+      - id: step222
+        run: echo "::set-output name=outputVar::test-output"
+      - uses: actions/checkout@v3
       - uses: ./.github/main
+  job2:
+    runs-on: ubuntu-18.04
+    needs:
+      - local-action-testing
+    echo: --${{needs.local-action-testing.outputs.outputVar1}}
