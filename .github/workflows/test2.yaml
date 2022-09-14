@@ -1,8 +1,8 @@
-name: test push2 when call
+name: test push2 when call2
 on:
   workflow_run:
     workflows:
-      - Preflight
+      - Preflight2
     types:
       - completed
     branches:
