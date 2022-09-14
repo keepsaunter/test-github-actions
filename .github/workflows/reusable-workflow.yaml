@@ -4,6 +4,7 @@ on:
     inputs:
       test:
         default: 100f
+        type: string
 jobs:
   job1:
     runs-on: ubuntu-18.04
