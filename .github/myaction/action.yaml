@@ -15,7 +15,7 @@ runs:
   using: composite
   steps:
     # - run: echo ${{inputs.testName}}
-      shell: sh # 每一步都需要写shell
+      # shell: sh # 每一步都需要写shell
     - id: outputVar1-generator
       run: echo "::set-output name=test99::val"
       shell: sh
