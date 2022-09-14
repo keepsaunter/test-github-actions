@@ -2,7 +2,7 @@ name: test push2 when call
 on:
   workflow_run:
     workflows:
-      - test-w
+      - Preflight
     types:
       - completed
 jobs:

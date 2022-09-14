@@ -1,4 +1,4 @@
-name: test-w
+name: Preflight
 on:
   push
 jobs:
