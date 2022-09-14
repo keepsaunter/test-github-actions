@@ -5,5 +5,4 @@ jobs:
   job1:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-      - run: echo ttt
+      - run: echo ttt6
