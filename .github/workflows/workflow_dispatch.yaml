@@ -14,4 +14,4 @@ jobs:
     needs:
       - local-action-testing
     steps:
-      - run: echo: --${{needs.local-action-testing.outputs.outputVar1}}
+      - run: echo --${{needs.local-action-testing.outputs.outputVar1}}
