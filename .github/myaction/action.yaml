@@ -5,9 +5,10 @@ inputs:
     description: Number of Octocats
     required: false
     default: test ouchao2
-# outputs:
-#   test99:
-#     description: Test oc output
+outputs:
+  test99:
+    description: Test oc output
+    value: ${{steps.outputVar1-generator.outputs.test99}}
 runs:
   # using: node12
   # main: dist/index.js
