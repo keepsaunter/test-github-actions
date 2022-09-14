@@ -4,9 +4,12 @@ on:
     inputs:
       test:
         type: string
+    outputs:
+      outputVar1: ${{steps.outputs.step1-2}}
 jobs:
   job1:
     runs-on: ubuntu-18.04
     steps:
       - run: echo ttt6${{inputs.test}}
-      - run: echo "::set-output name=outputVar1::test-output222"
+      - id: step1-2
+        run: echo "::set-output name=outputVar1::test-output222666"
