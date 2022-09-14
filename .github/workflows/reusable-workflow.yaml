@@ -4,9 +4,6 @@ on:
     inputs:
       test:
         type: string
-    outputs:
-      outputVar11:
-        value: ${{jobs.job1.outputs.outputVar12}}-ooo
 jobs:
   job1:
     runs-on: ubuntu-18.04

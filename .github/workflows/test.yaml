@@ -17,4 +17,4 @@ jobs:
     needs:
       - job2
     steps:
-      - run: echo 99${{needs.job2.outputs.outputVar11}}-99
+      - run: echo 99${{needs.job2.outputs.outputVar12}}-99
