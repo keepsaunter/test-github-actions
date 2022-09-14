@@ -9,7 +9,7 @@ outputs:
 # shell: sh
 runs:
   using: composite
+  runs-on: ubuntu-18.04
   steps:
     - id: step22
       run: echo "::set-output name=outputVar::test-output"
-      shell: sh
