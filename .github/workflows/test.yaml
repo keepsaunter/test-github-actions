@@ -3,4 +3,4 @@ on:
   push
 jobs:
   job2:
-    uses: ./.github/workflows/reusable-workflow.yaml
+    uses: ./.github/workflows/reusable-workflow2.yaml
