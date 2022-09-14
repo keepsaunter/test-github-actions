@@ -7,4 +7,5 @@ description: 'Local action inside reusable workflow testing'
 runs:
   using: composite
   steps:
-    - run: echo 999
+    - id: step22
+      run: echo 999

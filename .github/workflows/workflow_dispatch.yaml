@@ -2,9 +2,7 @@ on: push
 jobs:
   local-action-testing:
     runs-on: ubuntu-18.04
-    defaults:
-      run:
-        shell: sh
     steps:
-      - uses: actions/checkout@v3
+      - id: step22
+        uses: actions/checkout@v3
       - uses: ./.github/main
