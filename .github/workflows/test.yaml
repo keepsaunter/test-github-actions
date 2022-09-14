@@ -6,3 +6,5 @@ jobs:
     uses: ./.github/workflows/reusable-workflow.yaml
     with:
       test: 90999
+    steps:
+      run: echo 99
