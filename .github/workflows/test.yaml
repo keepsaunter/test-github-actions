@@ -7,5 +7,6 @@ jobs:
     with:
       test: 90999
   job3:
+    runs-on: ubuntu-18.04
     steps:
       - run: echo 99
