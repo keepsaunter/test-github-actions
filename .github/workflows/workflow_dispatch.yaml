@@ -6,8 +6,8 @@ jobs:
     #   outputVar1:
     #     value: ${{steps.step222.outputs.outputVar}}
     steps:
-      - id: step222
-        run: echo "::set-output name=outputVar::test-output2"
+      # - id: step222
+      #   run: echo "::set-output name=outputVar::test-output2"
       - uses: actions/checkout@v3
       - uses: ./.github/main
   job2:
