@@ -2,7 +2,7 @@ on: push
 jobs:
   local-action-testing:
     runs-on: ubuntu-18.04
-    default:
+    defaults:
       run:
         shell: sh
     steps:
