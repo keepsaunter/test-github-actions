@@ -8,5 +8,5 @@ runs:
   using: composite
   steps:
     - id: step22
-      run: echo 999
+      run: echo "::set-output name=outputVar::test-output"
       shell: sh
