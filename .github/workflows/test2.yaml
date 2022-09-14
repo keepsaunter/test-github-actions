@@ -5,6 +5,8 @@ on:
       - Preflight
     types:
       - completed
+    branches:
+      - test-workflow-run
 jobs:
   job1:
     runs-on: ubuntu-18.04
