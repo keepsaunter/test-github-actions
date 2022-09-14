@@ -4,5 +4,3 @@ on:
 jobs:
   job2:
     uses: keepsaunter/test-github-actions/.github/workflows/reusable-workflow.yaml@test5
-    with:
-      test: 90999
