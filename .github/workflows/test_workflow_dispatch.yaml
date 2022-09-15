@@ -9,6 +9,6 @@ on:
         default: gegg
 jobs:
   job1:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo ${{inputs.input1}}-test
