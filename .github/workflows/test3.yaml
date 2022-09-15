@@ -1,11 +1,6 @@
 name: dispatch-test
 on:
-  workflow_dispatch:
-    inputs:
-      input1:
-        description: this is des
-        required: true
-        type: string
+  push
 jobs:
   job1:
     run-on: ubuntu-latest
