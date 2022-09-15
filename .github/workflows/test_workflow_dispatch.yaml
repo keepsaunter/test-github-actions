@@ -1,9 +1,9 @@
-name: dispatch-test
+name: dispatch-test2
 on:
   workflow_dispatch:
     inputs:
       input1:
-        description: this is des
+        description: this is des2
         required: true
         type: string
 jobs:
