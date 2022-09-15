@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       input1:
-        description: this is des771
+        description: this is des7713
         required: true
         type: number2
         default: 22
