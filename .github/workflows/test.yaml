@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       input1:
-        description: fdsaf
+        description: this is des
         required: true
         type: string
 jobs:
