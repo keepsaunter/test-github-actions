@@ -1,11 +1,12 @@
-name: dispatch-test7
+name: dispatch-test71
 on:
   workflow_dispatch:
     inputs:
       input1:
-        description: this is des77
+        description: this is des771
         required: true
         type: string
+        default: gegg
 jobs:
   job1:
     run-on: ubuntu-latest
