@@ -1,5 +1,4 @@
 name: test local-action
-on: push
 jobs:
   local-action-testing:
     runs-on: ubuntu-18.04
