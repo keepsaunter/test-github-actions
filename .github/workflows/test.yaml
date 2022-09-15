@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       input1:
-        description: 'fsf',
+        description: 'fsf'
         required: true
         type: string
 jobs:
