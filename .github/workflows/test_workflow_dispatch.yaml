@@ -6,7 +6,7 @@ on:
         description: this is des771
         required: true
         type: string
-        default: gegg
+        default: 22
 jobs:
   job1:
     runs-on: ubuntu-latest
