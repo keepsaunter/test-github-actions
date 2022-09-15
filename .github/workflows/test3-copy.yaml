@@ -1,4 +1,4 @@
-name: dispatch-test2
+name: dispatch-test5
 on:
   workflow_dispatch:
     inputs:
