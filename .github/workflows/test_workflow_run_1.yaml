@@ -1,6 +1,9 @@
 name: Preflight
 on:
-  push
+  push:
+    branches:
+      - master
+      - test-self-runner
 jobs:
   job1:
     runs-on: ubuntu-18.04
