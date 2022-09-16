@@ -5,4 +5,4 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 100
+      - run: echo 1002
