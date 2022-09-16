@@ -1,0 +1,8 @@
+name: test push
+
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 100
