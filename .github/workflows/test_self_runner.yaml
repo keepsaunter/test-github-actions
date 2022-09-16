@@ -1,6 +1,10 @@
 name: test push
 
-on: push
+on:
+  push:
+    branches:
+      - master
+      - test-self-runner
 jobs:
   job1:
     runs-on: ubuntu-latest
