@@ -4,13 +4,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+  build:
+    runs-on: ubuntu-latest
+    needs: docker-hub
+    steps:
       - uses: docker/login-action@v1
         with: 
           username: ${{secrets.DOCKER_HUB_USERNAME}}
           password: ${{secrets.DOCKER_HUB_PASSWD}}
       - id: getDateTime
         name: get-date-str
-        run: echo "::set-output name=dateStr::$(date +'%Y%m%d%H%M%S')"
+        run: echo "::set-output name=dateStr::$(TZ=UTC-8 date +'%Y%m%d%H%M%S')"
       - id: docker_build
         name: build-image
         uses: docker/build-push-action@v2
@@ -20,7 +24,3 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/test-github-actions:${{steps.getDateTime.outputs.dateStr}}
       - run: echo ${{ steps.docker_build.outputs.digest }}
-  # build:
-  #   runs-on: ubuntu-latest
-  #   needs: docker-hub
-  #   steps:
