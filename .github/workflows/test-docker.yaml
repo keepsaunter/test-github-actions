@@ -1,6 +1,6 @@
 on: push
 jobs:
-  login-hub:
+  docker-hub:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -9,13 +9,14 @@ jobs:
           username: ${{secrets.DOCKER_HUB_USERNAME}}
           password: ${{secrets.DOCKER_HUB_PASSWD}}
       - id: getDateTime
+        name: get-date-str
         run: echo "::set-output name=dateStr::$(date +'%Y%m%d%H%M%S')"
       - id: docker_build
-        name: test1
+        name: build-image
         uses: docker/build-push-action@v2
         with:
-          context: ./
-          file: ./build/Dockerfile
+          context: ./build/
+          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/test-github-actions:${{steps.getDateTime.outputs.dateStr}}
       - run: echo ${{ steps.docker_build.outputs.digest }}
