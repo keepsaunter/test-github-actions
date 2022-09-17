@@ -19,6 +19,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: build
+          key: ${{ runner.os }}-primes
       - id: getDateTime
         name: get-date-str
         run: echo "::set-output name=dateStr::$(TZ=UTC-8 date +'%Y%m%d%H%M%S')"
