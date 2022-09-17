@@ -7,11 +7,12 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: build
-          key: ${{ runner.os }}-primes
+          key: ${{ runner.os }}-docker-1
       - uses: docker/login-action@v1
         with: 
           username: ${{secrets.DOCKER_HUB_USERNAME}}
           password: ${{secrets.DOCKER_HUB_PASSWD}}
+      - run: ls
   build:
     runs-on: ubuntu-latest
     needs: docker-hub
@@ -19,7 +20,8 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: build
-          key: ${{ runner.os }}-primes
+          key: ${{ runner.os }}-docker-1
+      - run: ls
       - id: getDateTime
         name: get-date-str
         run: echo "::set-output name=dateStr::$(TZ=UTC-8 date +'%Y%m%d%H%M%S')"
