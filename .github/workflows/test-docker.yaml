@@ -14,5 +14,5 @@ jobs:
           context: ./
           file: ./build/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/test-github-actions:2
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/test-github-actions:3
       - run: echo ${{ steps.docker_build.outputs.digest }}
