@@ -4,10 +4,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/cache@3
+        with:
+          path: build
       - uses: docker/login-action@v1
         with: 
           username: ${{secrets.DOCKER_HUB_USERNAME}}
           password: ${{secrets.DOCKER_HUB_PASSWD}}
+  build:
+    runs-on: ubuntu-latest
+    needs: docker-hub
+    steps:
       - id: getDateTime
         name: get-date-str
         run: echo "::set-output name=dateStr::$(TZ=UTC-8 date +'%Y%m%d%H%M%S')"
