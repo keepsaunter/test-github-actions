@@ -10,6 +10,7 @@ jobs:
           password: ${{secrets.DOCKER_HUB_PASSWD}}
   build:
     runs-on: ubuntu-latest
+    needs: docker-hub
     steps:
       - id: getDateTime
         name: get-date-str
