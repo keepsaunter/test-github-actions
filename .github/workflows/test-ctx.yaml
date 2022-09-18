@@ -1,6 +1,6 @@
 on: push
 jobs:
   job1:
-    if: ${{contains('hello world', 'llo')}}
+    if: ${{contains('hello world', 'llo2')}}
     steps:
       - run: echo 100
