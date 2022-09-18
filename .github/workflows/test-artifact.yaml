@@ -3,7 +3,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: test
+      -
         run: |
           ls
           ls -a
