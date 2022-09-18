@@ -11,6 +11,10 @@ jobs:
           key: ${{ runner.os }}-primes223
       - run: echo "fdsage"> ./build2/test.js
       - run: ls build2
+      - uses: actions/cache@v3
+        with:
+          path: build2
+          key: ${{ runner.os }}-primes5
   docker-hub2:
     runs-on: ubuntu-latest
     needs: docker-hub
@@ -19,4 +23,9 @@ jobs:
         with:
           path: build2
           key: ${{ runner.os }}-primes223
+      - run: ls build2
+      - uses: actions/cache@v3
+        with:
+          path: build2
+          key: ${{ runner.os }}-primes5
       - run: ls build2
