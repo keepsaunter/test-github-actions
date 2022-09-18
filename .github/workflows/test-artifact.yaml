@@ -7,9 +7,10 @@ jobs:
           mkdir tes5
           echo "new content" > tes5/t3.js
       - uses: actions/upload-artifact@v3
+        continue-on-error: true
         with:
-          name: my-artifacto12
-          path: tes62
+          name: my-artifacto1277
+          path: tes623
           if-no-files-found: error
       - run: ls tes5
   job2:
@@ -18,5 +19,5 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: my-artifacto12
+          name: my-artifacto1277
       - run: ls
