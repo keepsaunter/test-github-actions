@@ -9,9 +9,8 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifacto1
-          path: tes6
-          if-no-files-found:
-            description: this is no fileeee
+          path: tes62
+          if-no-files-found: warn
       - run: ls tes5
   job2:
     runs-on: ubuntu-latest
