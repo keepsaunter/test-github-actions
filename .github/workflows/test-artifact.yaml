@@ -3,8 +3,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      -
-        run: |
+      - run: |
           ls
           ls -a
   #     - uses: actions/upload-artifact@v3
