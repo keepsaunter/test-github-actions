@@ -4,17 +4,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        ls -a
-        ls
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: my-artifact2
-  #         path: test
-  # job2:
-  #   runs-on: ubuntu-latest
-  #   needs: job1
-  #   steps:
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: my-artifact2
-  #     - run: ls test
+          echo 100
+          echo 200
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact2
+          path: test
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: my-artifact2
+      - run: ls test
