@@ -3,7 +3,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'fdsf' > test/t1.js
+      - run: echo "new content" > test/t1.js
       - run: ls test
       - uses: actions/upload-artifact@v3
         with:
