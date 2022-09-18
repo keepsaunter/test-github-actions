@@ -10,3 +10,8 @@ jobs:
         with:
           node-version: ${{ matrix.version }}
       - run: node -v
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - run: node -v
