@@ -18,6 +18,6 @@ jobs:
         with:
           path: build2
           key: ${{ runner.os }}-test
-          restore-keys:
-            - ${{ runner.os }}-test-
+          restore-keys: |
+            ${{ runner.os }}-test-
       - run: ls build2
