@@ -3,11 +3,9 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - run: |
         ls
-        echo 200
-      - run: ls test
+        ls -a
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact2
