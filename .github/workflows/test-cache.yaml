@@ -1,7 +1,8 @@
 on: push
 jobs:
   docker-hub:
-    runs-on: ubuntu-latest
+    runs-on:
+      - shelf-hosted
     steps:
       - uses: actions/checkout@v3
       - run: ls build2
