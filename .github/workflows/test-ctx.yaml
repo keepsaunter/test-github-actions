@@ -6,4 +6,4 @@ jobs:
     steps:
       - run: |
           a=('ts' 'gg')
-          echo ${{join(a, '--' )}}
+          echo ${{join(a)}}
