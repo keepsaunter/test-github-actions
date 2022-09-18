@@ -1,0 +1,6 @@
+on: push
+jobs:
+  job1:
+    if: ${{contains('hello world', 'llo')}}
+    steps:
+      - run: echo 100
