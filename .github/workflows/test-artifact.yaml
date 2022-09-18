@@ -2,15 +2,14 @@ on: push
 jobs:
   job1:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - run: |
           mkdir tes5
           echo "new content" > tes5/t3.js
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifacty6
-          path: tes52
+          name: my-artifact
+          path: tes5
           if-no-files-found: error
       - run: ls tes5
   job2:
@@ -19,5 +18,5 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: my-artifacty6
+          name: my-artifact
       - run: ls
