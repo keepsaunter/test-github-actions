@@ -3,6 +3,19 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        ls
-        ls -a
+      - name: test
+        run: |
+          ls
+          ls -a
+  #     - uses: actions/upload-artifact@v3
+  #       with:
+  #         name: my-artifact2
+  #         path: test
+  # job2:
+  #   runs-on: ubuntu-latest
+  #   needs: job1
+  #   steps:
+  #     - uses: actions/download-artifact@v3
+  #       with:
+  #         name: my-artifact2
+  #     - run: ls test
