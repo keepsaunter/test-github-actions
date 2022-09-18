@@ -1,7 +1,7 @@
 on: push
 jobs:
   job1:
-    if: 0
+    if: 1
     runs-on: ubuntu-latest
     steps:
       - run: echo 100
