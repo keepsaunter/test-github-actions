@@ -1,6 +1,7 @@
 on: push
 jobs:
   job1:
+    runs-on: ubuntu-latest
     if: ${{contains('hello world', 'llo2')}}
     steps:
       - run: echo 100
