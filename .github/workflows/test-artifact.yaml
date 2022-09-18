@@ -4,6 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: ls
       - run: echo "new content" > test/t1.js
       - run: ls test
       - uses: actions/upload-artifact@v3
