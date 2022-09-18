@@ -1,6 +1,17 @@
 on: push
 jobs:
+  job1:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12, 14]
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: node -v
   job2:
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       - run: node -v
