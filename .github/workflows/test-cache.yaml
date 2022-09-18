@@ -16,6 +16,6 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: build2
+          path: build2/index.html
           key: ${{ runner.os }}-primes52123
       - run: ls build2
