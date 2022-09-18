@@ -8,8 +8,10 @@ jobs:
           echo "new content" > tes5/t3.js
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: tes5/t3.js
+          name: my-artifacto1
+          path: tes6
+          if-no-files-found:
+            description: this is no fileeee
       - run: ls tes5
   job2:
     runs-on: ubuntu-latest
@@ -17,5 +19,5 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: my-artifact
+          name: my-artifacto1
       - run: ls
