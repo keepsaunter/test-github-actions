@@ -3,10 +3,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 2
       matrix:
         node-version:
           - 12
           - 14
+          - 16
     steps:
       - uses: actions/setup-node@v3
         with:
