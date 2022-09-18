@@ -1,0 +1,11 @@
+on: push
+jobs:
+  job1:
+    if: 0
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 100
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 1002
