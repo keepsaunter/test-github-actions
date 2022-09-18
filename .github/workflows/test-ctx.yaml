@@ -4,4 +4,4 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{contains('hello world', 'llo')}}
     steps:
-      - run: echo ${{format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')}}
+      - run: echo ${{join(['ts','gg'], '--' )}}
