@@ -5,12 +5,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: ls build2
-      - run: echo "fsg" > build2/index5.js
+      - run: echo "fsg" > build2/test3/index5.js
       - uses: actions/cache@v3
         with:
           path: build2
           key: ${{ runner.os }}-w13
-      - run: echo "fsg2" > build2/index6.js
+      - run: echo "fsg2" > build2/test3/index6.js
       - run: ls build2
   docker-hub2:
     runs-on: ubuntu-latest
