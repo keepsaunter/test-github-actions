@@ -6,7 +6,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact21
+          name: my-artifact212
           path: tes3
       - run: ls tes3
   job2:
@@ -15,5 +15,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: my-artifact21
+          name: my-artifact212
+          path: tes8
       - run: ls
+      - run: ls tes8
