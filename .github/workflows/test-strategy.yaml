@@ -1,7 +1,6 @@
 on: push
 jobs:
   job2:
-    needs: job1
     runs-on: ubuntu-latest
     steps:
       - run: node -v
