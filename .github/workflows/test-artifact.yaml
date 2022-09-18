@@ -5,8 +5,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-        mkdir test
-        echo "new content" > test/t1.js
+        echo 100
+        echo 200
       - run: ls test
       - uses: actions/upload-artifact@v3
         with:
