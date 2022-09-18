@@ -8,7 +8,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: build2
-          key: t2-${{ runner.os }}-i12356-612
+          key: t2-${{ runner.os }}-i123561-612
   docker-hub2:
     runs-on: ubuntu-latest
     needs: docker-hub
@@ -16,7 +16,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: build2
-          key: t2-${{ runner.os }}-i5
-          # restore-keys: |
-          #   t2-${{ runner.os }}-i1
+          key: t2-${{ runner.os }}-i51
+          restore-keys: |
+            t2-${{ runner.os }}-i1
       - run: ls build2
