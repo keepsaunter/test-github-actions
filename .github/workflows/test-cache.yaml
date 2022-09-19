@@ -9,7 +9,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: build2
-          key: ${{ runner.os }}-e1
+          key: ${{ runner.os }}-e1-2
       - run: echo "fsg2" > build2/index6.js
       - run: ls build2
   docker-hub2:
