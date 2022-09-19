@@ -3,7 +3,6 @@ jobs:
   docker-hub:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - run: ls build2
       - run: echo "fsg" > build2/index5.js
       - run: echo "fsg2" > build2/index6.js
