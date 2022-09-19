@@ -6,4 +6,3 @@ jobs:
       image: saunter/github-action-1:latest
     steps:
       - run: ls /test-oc
-      - run: cat /test-oc/t1.js
