@@ -1,4 +1,4 @@
-name: test_repository_dispatch
+name: test_repository_dispatch222
 on:
   repository_dispatch:
     type: TRIGGER_KEYWORDS2
