@@ -1,7 +1,6 @@
-on: push
+on: repository_dispatch
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - run: echo success
-      - run: echo "${{toJSON(fromJSON('["push", "pull_request"]'))}}"
