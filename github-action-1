@@ -1,0 +1,3 @@
+FROM nginx
+RUN mkdir /test-oc && echo 'new content' > /test-oc/t1.js
+CMD /bin/sh
