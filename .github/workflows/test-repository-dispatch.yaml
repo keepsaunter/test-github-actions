@@ -1,5 +1,7 @@
 name: test_repository_dispatch
-on: repository_dispatch
+on:
+  repository_dispatch:
+    type: TRIGGER_KEYWORDS2
 jobs:
   job1:
     runs-on: ubuntu-latest
