@@ -4,8 +4,5 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: saunter/github-action-1:latest
-      credentials:
-        username: ${{secrets.DOCKER_HUB_USERNAME}}
-        password: ${{secrets.DOCKER_HUB_PASSWD}}
     steps:
       - run: ls /test-oc
