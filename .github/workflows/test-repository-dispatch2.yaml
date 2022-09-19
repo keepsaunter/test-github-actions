@@ -7,3 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo success
+
+# curl -X POST https://api.github.com/repos/keepsaunter/test-github-actions/dispatches \
+#     -H "Accept: application/vnd.github.everest-preview+json" \
+#     -H "Authorization: token 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" \
+#     --data '{"event_type": "TRIGGER_KEYWORDS2"}'
