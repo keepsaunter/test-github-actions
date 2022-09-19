@@ -8,7 +8,7 @@ jobs:
       - run: echo "fsg" > build2/index5.js
       - uses: actions/cache@v3
         with:
-          path: .
+          path: build2
           key: ${{ runner.os }}-e1-2
       - run: echo "fsg2" > build2/index6.js
       - run: ls build2
@@ -18,6 +18,6 @@ jobs:
     steps:
       - uses: actions/cache@v3
         with:
-          path: build2
+          path: build2/test2
           key: ${{ runner.os }}-e
-      - run: ls build2
+      - run: ls
