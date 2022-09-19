@@ -1,0 +1,7 @@
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: mkdir /test && echo 'new content2' > /test/t2.js
+      - run: cat /test/t2.js
