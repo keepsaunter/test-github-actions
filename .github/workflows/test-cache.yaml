@@ -20,4 +20,4 @@ jobs:
         with:
           path: build2/test2
           key: ${{ runner.os }}-e
-      - run: ls
+      - run: ls test2
