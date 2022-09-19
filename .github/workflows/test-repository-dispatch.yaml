@@ -1,0 +1,6 @@
+on: repository_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo success
