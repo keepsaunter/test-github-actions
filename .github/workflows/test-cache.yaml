@@ -16,8 +16,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: docker-hub
     steps:
-      - uses: actions/cache@v3
-        with:
-          path: build2
-          key: ${{ runner.os }}-e
       - run: ls build2
