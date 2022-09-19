@@ -3,4 +3,4 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.ref }}
+      - run: echo ${{ github.ref_name }}
