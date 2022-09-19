@@ -3,5 +3,5 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - echo success
-      - echo ${{fromJSON(github)}}
+      - run: echo success
+      - run: echo ${{fromJSON(github)}}
