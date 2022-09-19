@@ -4,4 +4,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo success
-      - run: echo "${{fromJSON('["push", "pull_request"]')}}"
+      - run: echo "${{toJSON(fromJSON('["push", "pull_request"]'))}}"
