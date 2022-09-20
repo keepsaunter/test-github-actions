@@ -6,7 +6,7 @@ jobs:
       - name: get_short_sha
         run: |
           commitSha="${{github.sha}}"
-          echo "::set-output name=shortSha::$(echo fdsfgw)"
+          echo "::set-output name=shortSha::fdsfgw"
       - run: echo ${{fromJSON('{"push":"pull_request"}')['push']}}
       - run: echo ${{steps.get_short_sha.outputs.shortSha}}
       # - run: echo ${{fromJSON('["push", "pull_request"]')[0]}}
