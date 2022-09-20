@@ -3,8 +3,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{github.sha}}
+      - name: get_short_sha
+        run: |
+          commitSha="${{github.sha}}"
+          echo "::set-output name=shortSha::${commitSha:0:6}"
       - run: echo ${{fromJSON('{"push":"pull_request"}')['push']}}
+      - run: echo ${{steps.get_short_sha.outputs.shortSha}}
       # - run: echo ${{fromJSON('["push", "pull_request"]')[0]}}
     # env:
     #   GITHUB_CONTEXT: ${{ toJson(github) }}
