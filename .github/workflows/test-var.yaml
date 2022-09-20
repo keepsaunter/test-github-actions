@@ -9,6 +9,7 @@ jobs:
           echo "::set-output name=shortSha::${commitSha:0:6}"
       - run: echo ${{fromJSON('{"push":"pull_request"}')['push']}}
       - run: echo ${{steps.get_short_sha.outputs.shortSha}}
+      - run: echo ${{github.event.repository.name}}
       - run: echo "${{toJson(github)}}"
       # - run: echo "${GITHUB_CONTEXT}"
       # - run: echo ${{fromJSON('["push", "pull_request"]')[0]}}
