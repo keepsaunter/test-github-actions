@@ -3,6 +3,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{github.sha}}
       - run: echo ${{fromJSON('{"push":"pull_request"}')['push']}}
       # - run: echo ${{fromJSON('["push", "pull_request"]')[0]}}
     # env:
