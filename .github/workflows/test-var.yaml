@@ -3,7 +3,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: get_short_sha
+      - id: get_short_sha
         run: |
           commitSha="${{github.sha}}"
           echo "::set-output name=shortSha::fdsfgw"
